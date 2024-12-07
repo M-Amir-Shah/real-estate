@@ -1,0 +1,140 @@
+/* General Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: rgb(235, 233, 237);
+    color: var(--textColor);
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Allows the logo to stay aligned on the left */
+}
+
+.logo {
+    height: 95px;
+    width: auto;
+}
+/* Navigation Styling */
+nav a {
+    margin: 0 1rem;
+    color: var(--textColor);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;  /* Makes the text bold */
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: var(--secondaryColor);
+}
+
+/* Nav Button */
+header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+header .nav-btn.nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+/* Right Icons Styling */
+.right-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex: 1; /* Aligns icons to the right */
+}
+
+/* Adjust right icons */
+.right-icons img {
+    height: 35px;
+    width: auto;
+}
+
+.phone-number {
+    font-weight: bold;  /* Makes the text bold */
+    font-size: 1.2rem;   /* Increases the font size */
+    margin-left: 8px;    /* Adds a small margin between the icon and the number */
+    color: var(--textColor);  /* Optional: set the text color */
+}
+
+/* Mobile View Styling */
+@media only screen and (max-width: 1024px) {
+    header {
+        padding: 0 1rem;
+    }
+
+    /* Center the Hamburger Icon */
+    header .nav-btn {
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        background-color: var(--secondaryColor);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 1.8rem;
+    }
+
+    /* Navigation Overlay */
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--mainColor);
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(-100%);
+    }
+
+    /* When Navbar is Open */
+    header nav.responsive_nav {
+        transform: translateY(0);
+        background-color: rgb(30 41 59); /* Change background color here */
+        color: rgb(255, 255, 255);
+    }
+
+    nav a {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust Close Button */
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    /* When Navbar is Open, Position the Show Navbar Button Below */
+    .right-icons.navbar-open .nav-btn {
+        position: static;
+        margin-top: 1rem;
+        transform: none;
+    }
+}
