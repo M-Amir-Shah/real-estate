@@ -35,17 +35,19 @@ function Navbar() {
                 </button>
             </nav>
 
-
             <div className={`right-icons ${isNavbarOpen ? "navbar-open" : ""}`}>
                 <img src={phone} alt="Phone Icon" className="icon" />
                 <span className="phone-number">888-908-9102</span>
                 <img src={user} alt="User Icon" className="icon" />
-                <button
-                    className="nav-btn"
-                    onClick={toggleNavbar}
-                >
-                    <FaBars />
-                </button>
+                {/* Only show the FaBars icon when the navbar is closed */}
+                {!isNavbarOpen && (
+                    <button
+                        className="nav-btn"
+                        onClick={toggleNavbar}
+                    >
+                        <FaBars />
+                    </button>
+                )}
             </div>
         </header>
     );

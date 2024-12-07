@@ -17,7 +17,7 @@ header {
 }
 
 .logo {
-    height: 95px;
+    height: 50px;
     width: auto;
 }
 /* Navigation Styling */
@@ -58,22 +58,25 @@ header .nav-btn.nav-close-btn {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 1rem;
-    flex: 1; /* Aligns icons to the right */
+    /* gap: 1rem; */
+    flex: 0.5; /* Aligns icons to the right */
 }
 
 /* Adjust right icons */
 .right-icons img {
-    height: 35px;
+    height: 20px;
     width: auto;
+    margin-right: 4px;  /* Slightly reduces the space between icon and phone number */
 }
 
+
 .phone-number {
-    font-weight: bold;  /* Makes the text bold */
-    font-size: 1.2rem;   /* Increases the font size */
-    margin-left: 8px;    /* Adds a small margin between the icon and the number */
+    font-weight: 700;  /* Keeps the text bold */
+    font-size: 1rem;   /* Font size */
+    margin-left: 2px;    /* Decreases the margin between the icon and the number */
     color: var(--textColor);  /* Optional: set the text color */
 }
+
 
 /* Mobile View Styling */
 @media only screen and (max-width: 1024px) {
