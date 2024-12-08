@@ -1,0 +1,74 @@
+/* ServiceCard.css */
+
+.sell-home-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 25px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    border-bottom: 5px solid #e63946;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+  }
+  
+  .sell-home-card:hover {
+    background-color: #f1b0b7;
+  }
+  
+  .icon-container {
+    padding: 12px;
+    border-radius: 50%;
+    background-color: #f5d8db;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #e63946;
+    transition: transform 0.3s ease;
+  }
+  
+  .sell-home-card:hover .icon {
+    transform: scale(1.1);
+  }
+  
+  .card-title {
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .card-description {
+    font-size: 18px;
+    color: #6e7c7c;
+  }
+  
+  .read-more-button {
+    border-bottom: 2px solid #e63946;
+    color: #e63946;
+    font-weight: 600;
+  }
+  
+  .service-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+    background-color: #f5d8db;
+  }
+  
+  @media (max-width: 768px) {
+    .service-cards-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-cards-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
