@@ -21,12 +21,12 @@ function Navbar() {
             </div>
 
             <nav ref={navRef}>
-                <a href="/#">HOME</a>
-                <a href="/#">ABOUT</a>
-                <a href="/#">PROPERTIES</a>
-                <a href="/#">SERVICES</a>
-                <a href="/#">TESTIMONIALS</a>
-                <a href="/#">CONTACT</a>
+                <a className="btn-color" href="/#">HOME</a>
+                <a className="btn-color" href="/#">ABOUT</a>
+                <a className="btn-color" href="/#">PROPERTIES</a>
+                <a className="btn-color" href="/#">SERVICES</a>
+                <a className="btn-color" href="/#">TESTIMONIALS</a>
+                <a className="btn-color" href="/#">CONTACT</a>
                 <button
                     className="nav-btn nav-close-btn"
                     onClick={toggleNavbar}

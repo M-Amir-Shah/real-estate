@@ -1,0 +1,149 @@
+.Area {
+    width: 100%; /* Set the width to 100% of its container */
+    min-height: calc(100vh - 100px);
+    margin: 20px auto; /* Center the container with equal margin on both sides */
+    max-width: 1800px; /* Optional: To ensure the container doesn't stretch too wide on larger screens */
+    background: rgb(237, 204, 204);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column; 
+}
+
+.area-left {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Ensures left alignment of the text */
+}
+
+.area-left h3 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #e83232;
+}
+
+.area-left h2 {
+    font-size: 50px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #222;
+}
+
+.area-right {
+    display: flex;
+    flex-direction: row; /* Stacks the images vertically */
+    gap: 20px; /* Adds spacing between images */
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Adjust the space between text and images */
+}
+
+.area-img {
+    width: 350px; /* Set uniform width */
+    height: 500px; /* Set uniform height */
+    border-radius: 15px; /* Rounds image corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow to images */
+    object-fit: cover; /* Ensures aspect ratio is maintained */
+    transition: transform 0.3s ease-in-out; /* Adds hover effect */
+}
+
+.area-img:hover {
+    transform: scale(1.05); /* Enlarges image slightly on hover */
+}
+
+/* General container styles for the listing information */
+.listing-container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Styling for each listing container */
+.listing-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Main title (5K, 9K, 6K) styles */
+.main-title {
+    color: black;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+/* Sub-title (ACTIVE LISTINGS, SOLID LISTINGS, CLIENTS WE'VE SERVED) */
+.sub-title {
+    font-size: 1.125rem;
+    color: #4b5563; /* Gray color for light mode */
+}
+
+/* Dark mode styles */
+body.dark-mode .main-title {
+    color: white;
+}
+
+body.dark-mode .sub-title {
+    color: white;
+}
+
+/* AOS (Animate On Scroll) transition */
+[data-aos="slide-up"] {
+    transition: transform 0.3s ease-in-out;
+}
+
+[data-aos="slide-up"].aos-animate {
+    transform: translateY(0);
+}
+
+[data-aos-delay="200"] {
+    transition-delay: 200ms;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 850px) {
+    .Area {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .area-right {
+        flex-direction: row;
+        flex-wrap: wrap; /* Allow images to wrap if needed */
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .area-img {
+        width: 225px; /* Adjust image size for smaller screens */
+        height: 300px; /* Maintain aspect ratio for smaller screens */
+    }
+
+    .listing-container-wrapper {
+        flex-direction: column; /* Stack the listings vertically */
+        gap: 1.5rem;
+        align-items: center;
+    }
+    
+    .main-title {
+        font-size: 3rem; /* Adjust main title font size on smaller screens */
+    }
+
+    .sub-title {
+        font-size: 1rem; /* Adjust sub-title font size on smaller screens */
+    }
+}
