@@ -43,17 +43,34 @@ const ServiceCards = () => {
     { title: "Photoshoot", description: "We prepare your home visual presentation" },
   ];
 
+  // Split the services into two groups: first 3 and the remaining 3
+  const firstRowServices = services.slice(0, 3);
+  const secondRowServices = services.slice(3);
+
   return (
-    <div className="service-cards-container">
-        <div className="area-left" data-aos="fade-left">
-                <h3 className="animate">OUR SERVICES</h3>
-                <h2 className="animate">Top real estate <br/>
-                services available</h2>
-            </div>
-            
-      {services.map(service => (
-        <ServiceCard key={service.title} title={service.title} description={service.description} />
-      ))}
+    <div className="service-section">
+      {/* Section 1: Heading */}
+      <div className="section-header" data-aos="fade-left">
+        <h3 className="animate">OUR SERVICES</h3>
+        <h2 className="animate">
+          Top real estate <br />
+          services available
+        </h2>
+      </div>
+
+      {/* Section 2: First Row of Cards */}
+      <div className="service-cards-row">
+        {firstRowServices.map(service => (
+          <ServiceCard key={service.title} title={service.title} description={service.description} />
+        ))}
+      </div>
+        <br/>
+      {/* Section 3: Second Row of Cards */}
+      <div className="service-cards-row">
+        {secondRowServices.map(service => (
+          <ServiceCard key={service.title} title={service.title} description={service.description} />
+        ))}
+      </div>
     </div>
   );
 };
