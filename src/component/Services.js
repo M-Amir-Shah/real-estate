@@ -56,7 +56,7 @@ const ServiceCards = () => {
           Top real estate <br />
           services available
         </h2>
-      </div>
+      </div>  
 
       {/* Section 2: First Row of Cards */}
       <div className="service-cards-row">
