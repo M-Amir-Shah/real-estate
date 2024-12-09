@@ -1,0 +1,117 @@
+.footer-container {
+    background-color: #152236;
+    padding: 10px 0;
+    overflow: hidden; /* Remove both vertical and horizontal scrolling */
+}
+
+.footer-column {
+    padding: 10px;
+}
+
+.footer-column-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Change color to white */
+    margin-left: 30px;
+}
+.footer-container .footer-column .footer-column-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: white !important; /* Use !important to override other styles */
+}
+
+.footer-column-text {
+    font-size: 20px;
+    color: aliceblue;
+    margin-left: 30px; /* Ensure no additional indentation */
+    margin-right: 30px;
+    display: block; /* Ensure the text stays in one block */
+    line-height: 1.5; /* Increase line height for better readability */
+    text-align: justify;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-text {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.social-media-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the icons */
+}
+
+.social-icon {
+    font-size: 30px;
+    color: #000000;
+    background-color: white; /* Add a white background */
+    border-radius: 15px; /* Make it circular */
+    padding: 8px; /* Add padding for spacing inside the box */
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Add transition for background color */
+    gap: 1rem; /* Add space between icons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+}
+
+.social-icon:hover {
+    color: white; /* Change icon color to white */
+    background-color: red; /* Change background to red */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+.social-icon.facebook:hover {
+    color: white; /* Change icon color to white */
+    background-color: red; /* Change background to red */
+}
+
+.social-icon.instagram:hover {
+    color: white; /* Change icon color to white */
+    background-color: red; /* Change background to red */
+}
+
+.social-icon.twitter:hover {
+    color: white; /* Change icon color to white */
+    background-color: red; /* Change background to red */
+}
+
+.social-icon.youtube:hover {
+    color: white; /* Change icon color to white */
+    background-color: red; /* Change background to red */
+}
+
+.property-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.property-profile {
+    display: flex;
+    align-items: center;
+}
+
+.property-image {
+    width: 175px;
+    height: 100px;
+    margin-right: 10px;
+    margin-left: 30px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.property-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.property-name {
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.property-price {
+    color: #acaaaa;
+    font-size: 20px;
+}
