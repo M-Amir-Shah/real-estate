@@ -1,66 +1,39 @@
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    background-color: rgb(231, 231, 235);
-}
-
-.main {
-    background-color: rgb(231, 231, 235);
-    min-height: 100%;
-}
-
-.h3 {
-    color: red;
-    font-size: 16px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.h2 {
-    font-size: 39px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 .cards-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0px;
+    display: flex; /* Use flex to place two sections side by side */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 20px; /* Add spacing between the sections */
     max-width: 1200px;
     margin: 10px auto;
-    overflow-x: auto;
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
 }
 
 .section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0px;
-    flex: 1;
-    width: 100%;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns in each section */
+    gap: 20px; /* Space between the cards */
+    flex: 1; /* Allow sections to take equal space */
+    width: 100%; /* Ensure sections take full width */
 }
 
 @media (max-width: 768px) {
     .cards-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 30px;
+        flex-direction: column; /* Stack sections vertically on mobile */
+        align-items: center; /* Center the sections horizontally */
+        padding: 0 30px; /* Add padding to the left and right to create space */
     }
 
     .section {
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-        max-width: 400px;
+        grid-template-columns: repeat(1, 1fr); /* 1 column for each section on small screens */
+        width: 100%; /* Make sure section takes full width */
+        max-width: 400px; /* Limit the max width for cards */
     }
 
     .ant-card {
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Light dull border */
+        border-radius: 8px; /* Optional: rounded corners for the cards */
     }
 }
+
 
 .container {
     border: solid rgb(227, 220, 220) 2px;
@@ -70,9 +43,13 @@ body {
     grid-template-columns: repeat(1, 1fr);
 }
 
+
+
+
 .card-cover {
     position: relative;
     height: 200px;
+    /* Set a fixed height for the image */
     overflow: hidden;
 }
 
@@ -82,28 +59,39 @@ body {
     object-fit: cover;
     border-radius: 10px;
     filter: brightness(0.5);
+    /* Slightly dull the image */
     transition: filter 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
 .card-cover img:hover {
     filter: brightness(1);
+    /* Restore brightness on hover */
 }
+
 
 .badges {
     position: absolute;
     top: 10px;
     width: 100%;
+    /* Ensure it spans the width of the card */
     display: flex;
     justify-content: space-between;
+    /* Space badges apart */
     padding: 0 10px;
+    /* Add padding to prevent overlap */
 }
 
 .badge-right {
     display: flex;
     flex-direction: row;
+    /* Stack badges vertically */
     gap: 5px;
+    /* Add spacing between badges */
     margin-right: 20px;
 }
+
+
 
 .bottom-icons {
     position: absolute;
