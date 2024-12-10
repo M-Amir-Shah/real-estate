@@ -5,6 +5,15 @@ import logo from '../images/logo.png';
 import user from '../images/user.png';
 import phone from '../images/phone.png';
 
+// import Home from './component/Home'; // Correct import path
+// import About from './component/About';
+// import Properties from './component/Properties';
+// import Service from "./component/Services";
+// import Testimonial from './component/Testimonial';
+// import Contact from './component/Contact';
+
+
+
 function Navbar() {
     const navRef = useRef();
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -21,7 +30,7 @@ function Navbar() {
             </div>
 
             <nav ref={navRef}>
-                <a className="btn-color" href="/#">HOME</a>
+                <a className="btn-color" href=".\component\Home">HOME</a>
                 <a className="btn-color" href="/#">ABOUT</a>
                 <a className="btn-color" href="/#">PROPERTIES</a>
                 <a className="btn-color" href="/#">SERVICES</a>
